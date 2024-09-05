@@ -1,0 +1,178 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*,*:before,*:after{
+	box-sizing: border-box;
+}
+
+/* 已修正：CSS 中的第 53 行應為 img 而非 image */
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+body{
+	font-family: "Castoro", serif;
+	line-height: 1.5;
+}
+
+/* 已修正：.container 中的 padding 可以刪除
+- 承上，在這份文件中，內容實際上都在中間距左右 312px 的地方，所以 1920-312*2=1296，所以 .container 設定為 1296px 即可。 */
+.container{
+	max-width: 1296px;
+	margin: 0 auto;
+}
+
+.text-ri{
+	text-align: right;
+}
+
+.mb-2{
+	margin-bottom: 8px;
+}
+.mb-3{
+	margin-bottom: 12px;
+}
+.mb-4{
+	margin-bottom: 16px;
+}
+
+.mr-10{
+	margin-right: 40px;
+}
+
+.header{
+	padding-top: 160px;
+}
+.header .title{
+	font-size: 128px;
+	letter-spacing: 0.12em;
+}
+
+/* 已修正： .pic-container 這一層 div 建議可以移除來簡化結構。
+- 承上，.header .pic 的 width 可以移除，並且加上 margin: 0 auto 使其置中。 */
+.header .pic{
+	display: block;
+	margin: 0 auto;
+}
+
+.intro{
+	background-color: #EFEFEF;
+	padding: 48px 0;
+}
+
+/* 已修正： .intro .para 中的 margin-left 改為 auto，段落就會靠頁面左側了。 */
+.intro .para{
+	max-width: 636px;
+	margin-left: auto;
+	font-size: 32px;
+}
+
+.expri{
+	padding-top: 80px;
+	padding-bottom: 120px;
+}
+
+/* 已修正： .expri .text 中的 margin-right 可以移除 */
+.expri .text{
+	max-width: 636px;
+	margin-bottom: 40px;
+}
+
+.expri .title{
+	color: #AE0000;
+	font-size: 40px;
+	border-bottom: 3px solid #AE0000;
+	margin-bottom: 16px;
+}
+.expri .list-text{
+	font-size: 24px;
+}
+
+/* 已修正： Vito Evans 裡面的電話、信箱和網址可以加上 a 標籤來有連結的效果，並且可以在 a 標籤的 href 加上 mailto、tel 來開啟對應的功能，例如：<a href="mailto:someone@example.com">Send email</a> <a href="tel:0988888888">0988888888</a>，並可以增加 hover 效果。 */
+.expri .list-link{
+	text-decoration: none;
+	color: #000000;
+}
+.expri .list-link:hover{
+	color: #949494;
+}
+
+.expri .time-text{
+	color: #949494;
+	font-size: 20px;
+	font-style: italic;
+}
+
+/* 已修正： .footer 的背景顏色是 #000000，建議還是以設計稿為主。 */
+.footer{
+	background-color: #000000;
+	padding: 64px 0;
+}
+
+
+/* .footer .icons 中的 font-size 可以移除
+-> 因為footer會出現一個不明高度，我懷疑是之前的每日活動作業提到的圖片不明高度(https://tzuhui.io/2020/01/08/HTML/html-img-blank/)，所以嘗試加入font-size: 0;把那段不明高度移除 */
+.footer .icons{
+	text-align: center;
+	font-size: 0;
+}
+.footer .icon-item{
+	display: inline-block;
+}
+.footer .icon-img{
+	transition: all 0.4s;
+}
+/* 已修正：社群 icon 可以加上 a 標籤，並加上 :hover 的效果。 */
+.footer .icon-link:hover .icon-img{
+	padding-bottom: 12px;
+	margin-bottom: 8px;
+	border-bottom: 3px solid #AE0000;
+}
+
